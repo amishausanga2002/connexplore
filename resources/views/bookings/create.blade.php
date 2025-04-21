@@ -134,18 +134,18 @@
                 <label for="time_slot" class="form-label block mb-2" style="font-weight: bold;">Time Slot</label>
                 <select name="time_slot" id="timeSlotSelect" class="form-select block w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-md" required>
                     <option value="">Select Time Slot</option>
-                   
+
                 </select>
             </div>
             <div class="mb-3">
                 <label  class="form-label block mb-2" style="font-weight: bold;">Set</label>
                 <select name="set_number" id="setSelect"class="form-select block w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-md" required>
                     <option value="">Select Set</option>
-                   
+
                 </select>
             </div>
 
-            <button type="submit" class="btn btn-primary block w-full text-center py-2 rounded-md text-white" style="background-color: #007bff; border-color: #007bff; font-weight: bold;">Book Now</button>
+            <button type="submit" id="book_now_btn" class="btn btn-primary block w-full text-center py-2 rounded-md text-white" style="background-color: #007bff; border-color: #007bff; font-weight: bold;">Book Now</button>
         </form>
     </div>
     <script>

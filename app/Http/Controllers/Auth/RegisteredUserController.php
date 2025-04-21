@@ -39,7 +39,7 @@ class RegisteredUserController extends Controller
             'email',
             'max:255',
             'unique:users,email',  // Ensures the email is not already registered
-            'regex:/^[a-zA-Z0-9._%+-]+@students\.apiit\.lk$/', // Allow only cb******@students.apiit.lk emails
+            // 'regex:/^[a-zA-Z0-9._%+-]+@students\.apiit\.lk$/', // Allow only cb******@students.apiit.lk emails
             // 'exists:approved_emails,email'  // Checks if the email is approved by admin
         ],
         'password' => ['required', 'confirmed', Rules\Password::defaults()],
@@ -55,10 +55,10 @@ class RegisteredUserController extends Controller
      $otp = mt_rand(100000,999999);  // Generate a random 6-character OTP
      $user->otp = $otp;
      $user->save();
- 
+
      // Send OTP via email
      Mail::to($user->email)->send(new OtpVerificationMail($otp));
- 
+
      // Redirect user to OTP verification page
     //  return redirect(route('verifyOtp'));
 
